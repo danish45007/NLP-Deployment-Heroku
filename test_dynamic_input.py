@@ -41,3 +41,4 @@ data =['input_text.txt']
 vect = cv.transform(data).toarray()
 my_pred = clf.predict(vect)
 print(my_pred)
+
