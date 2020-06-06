@@ -5,6 +5,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.externals import joblib
 import pickle
 import warnings
+import joblib
 #warnings.warn("All good",category=DeprecationWarning)
 df= pd.read_csv("spam.csv", encoding="latin-1")
 df.drop(['Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4'], axis=1, inplace=True)
@@ -40,5 +41,7 @@ data =['input_text.txt']
 #data = ["Hello my name is danish"]
 vect = cv.transform(data).toarray()
 my_pred = clf.predict(vect)
+# with open ("input_text.txt","r") as f:
+#      print(f.read())
 print(my_pred)
 
